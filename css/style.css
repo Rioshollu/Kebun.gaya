@@ -1,0 +1,368 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    background-color: #EEEEEE;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+#bg-login {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.judul {
+    text-align: center;
+}
+.box-login {
+    width: 350px;
+    min-height: 200px;
+    border: 1px solid #000;
+    background-color: #f8f8f8;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.box-login h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.input-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.btn {
+    padding: 8px 15px;
+    background-color: #ce0c0c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+header {
+    background-color: #91C788;
+    color: #000;
+}
+header h1 {
+    float: left;
+    padding: 10px 0;
+}
+header ul {
+    float: right;
+}
+header ul li {
+    display: inline-block;
+}
+header ul li a {
+    padding: 20px 0 15px 15px;
+    display: inline-block;
+}
+footer {
+    padding: 25px 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+.container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.section {
+    padding: 20px 0;
+}
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px ;
+    box-sizing: border-box;
+    margin: 10px 0 25px 0;
+}
+.box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tabel {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabel tr {
+    height: 30px;
+}
+.tabel tr td {
+    padding: 5px 10px;
+    height: 30px;
+}
+.search {
+    padding:15px 0;
+    background-color: #fff;
+    border:1px solid #ccc;
+}
+.search input[type=text] {
+    width: 70%;
+    padding: 10px;
+}
+.search input[type=submit] {
+    padding: 12px 15px;
+    background-color: #52734D;
+    color: #fff;
+    border:none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.col-5 {
+    width: 20%;
+    height: 100px;
+    text-align: center;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.col-4:hover {
+    box-shadow: 0 0 10px #999;
+}
+.col-4 {
+    width: 25%;
+    height: 340px;
+    border: 1px solid #ccc;
+    text-align: center;
+    float: left;
+    padding:10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.col-4 img{
+    width: 70%;
+}
+.col-4 .nama {
+    margin: 5px 0 5px 0;
+}
+.col-4 .harga {
+    font-weight: bold;
+    color: #C70039;
+}
+.footer {
+    padding: 25px 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.footer p {
+    margin-bottom: 10px;
+}
+.footer small {
+    margin-top: 25px;
+    display: inline-block;
+}
+.col-2 {
+    width: 50%;
+    min-height: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+.col-2 img{
+    border: 1px solid #f9f9f9;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.col-2 h3{
+    margin-bottom: 5px;
+}
+.col-2 h4 {
+    color: #C70039;
+}
+.col-2 p {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        width: 90%;
+    }
+    .col-5 {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .col-4 {
+        width: 50%;
+        height: 300px;
+    }
+    .col-2 {
+        width: 100%;
+    }
+}
+.btn-edit {
+    padding: 5px 8px;
+    background-color: #5F7161;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-hapus {
+    padding: 5px 8px;
+    background-color: #ce0c0c;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-primary {
+    padding: 5px 8px;
+    background-color: #ce0c0c;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-default {
+    padding: 5px 8px;
+    background-color: #fff;
+    border: 1px solid;
+    color: #000;
+    border-radius: 10px;
+}
+/* .user login */
+.tittle-login{
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.form-tabel{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    
+}
+/* background bank nota */
+.alert-info p {
+    padding: 10px 10px;
+    width: 50%;
+    background-color: #a5d6f7;
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+}
+.form-control{
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+}
+.form-control-1{
+    width: 80%;
+    height: 50px;
+    border: 1px solid;
+    resize: none;
+}
+/* sub total */
+.total{
+    padding-left: 11px;
+    text-align: start;
+}
+/* nota pengiriman */
+.word {
+    width: 200px;
+}
+.word p {
+    word-wrap: break-word;
+}
+/* daftar user */
+.form-control-4 {
+    width: 40%;
+    height: 55px;
+    resize: none;
+}
+.form-control-2 {
+    width: 40%;
+    height: 30px;
+}
+.box-1 {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 20px ;
+    margin: 25px 200px 20px 200px;
+}
+.panel-heading h3 {
+    text-align: center;
+}
+/* riwayat user */
+.btn-bayar {
+    padding: 5px 8px;
+    background-color: #1dd13b;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn-warning {
+    padding: 5px 8px;
+    background-color: #f7bf17;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/* pembayaran */
+.form-group p{
+    color: #C70039;
+}
+.alert-info-1 {
+    padding: 8px 7px;
+    width: 30%;
+    background-color: #a5d6f7;
+}
+.col-md-6 {
+    width: 50%;
+    text-align: center;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.img-responsive {
+    width:250px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Login user */
+.panel-default{
+    width: 400px;
+    margin: 170px 350px;
+    border: 1px solid #000;
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* Laporan Admin */
+.col-md-5 {
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.btn-1 {
+    padding: 8px 15px;  
+    background-color: #630000;
+    color: #fff;
+    cursor: pointer;
+    margin: 25px;
+}
+/* btn tips-perawatan */
+.btn-tips {
+    padding: 8px 20px;
+    background-color: #DCD7C9;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+}

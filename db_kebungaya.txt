@@ -1,0 +1,313 @@
+===Basis data db_kebungaya
+
+== Struktur dari tabel tb_admin
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**admin_id**//|int(11)|Tidak|
+|admin_name|varchar(30)|Tidak|
+|username|varchar(20)|Tidak|
+|password|varchar(32)|Tidak|
+|admin_telp|varchar(15)|Tidak|
+|admin_email|varchar(30)|Tidak|
+|admin_address|text|Tidak|
+== Dumping data untuk tabel tb_admin
+
+|1|Rio Shollu Saputra|admin|21232f297a57a5a743894a0e4a801fc3|087788103686|rioshollu21@gmail.com|Perumahan Telaga Golf Sawangan, Cluster Belanda, Blok EX No.15, Kota Depok
+== Struktur dari tabel tb_category
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**category_id**//|int(11)|Tidak|
+|category_name|varchar(20)|Tidak|
+== Dumping data untuk tabel tb_category
+
+|16|Aglonema
+|17|Philodendron
+|22|Anthurium
+|23|Banana Variegata
+|24|Keladi
+|25|Kaktus
+|26|Calathea
+|29|Alocasia
+|30|Hoya
+|31|Dieffenbachia
+|36|Monstera
+== Struktur dari tabel tb_ongkir
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**id_ongkir**//|int(11)|Tidak|
+|nama_kota|varchar(50)|Tidak|
+|tarif|int(11)|Tidak|
+== Dumping data untuk tabel tb_ongkir
+
+|1|Kecamatan Beji|15000
+|2|Kecamatan Bojong Sari|15000
+|3|Kecamatan Cilodong|20000
+|4|Kecamatan Cimanggis|25000
+|6|Kecamatan Cinere|20000
+|7|Kecamatan Limo|15000
+|8|Kecamatan Tapos|30000
+|9|Kecamatan Sawangan|10000
+== Struktur dari tabel tb_pelanggan
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**id_pelanggan**//|int(11)|Tidak|
+|email_pelanggan|varchar(30)|Tidak|
+|password_pelanggan|varchar(32)|Tidak|
+|nama_pelanggan|varchar(30)|Tidak|
+|telp_pelanggan|varchar(15)|Tidak|
+== Dumping data untuk tabel tb_pelanggan
+
+|3|puspa@gmail.com|puspa|puspa kumalasari|08761244553
+|4|kusnadi@gmail.com|kusnadi|Kusnadi Purnomo|08773491657
+|9|Evita@gmail.com|evita|evita dea valentina|081264783245
+== Struktur dari tabel tb_pembayaran
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**id_pembayaran**//|int(11)|Tidak|
+|id_pembelian|int(11)|Tidak|
+|nama|varchar(70)|Tidak|
+|bank|varchar(30)|Tidak|
+|jumlah|int(11)|Tidak|
+|tanggal|date|Tidak|
+|bukti|varchar(100)|Tidak|
+== Dumping data untuk tabel tb_pembayaran
+
+|11|39|Evita Dea Valentina|Mandiri|270000|2022-06-15|20220615064151-bukti mandiri.jpg
+== Struktur dari tabel tb_pembelian
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**id_pembelian**//|int(11)|Tidak|
+|id_pelanggan|int(11)|Tidak|
+|id_ongkir|int(11)|Tidak|
+|tgl_pembelian|date|Tidak|
+|total_pembelian|int(11)|Tidak|
+|nama_kota|varchar(20)|Tidak|
+|tarif|int(11)|Tidak|
+|alamat_pengirim|text|Tidak|
+|status_pembelian|varchar(50)|Tidak|pending
+|resi_pengiriman|varchar(50)|Tidak|
+== Dumping data untuk tabel tb_pembelian
+
+|39|9|2|2022-06-15|270000|Cirebon|20000|Jl. Margonda Raya|Selesai| 
+|42|9|2|2022-06-27|70000|Cirebon|20000|Jl.Margonda|pending| 
+|43|9|2|2022-06-27|270000|Cirebon|20000|Jl. Margonda Raya|pending| 
+== Struktur dari tabel tb_pembelian_product
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**id_pembelian_product**//|int(11)|Tidak|
+|id_pembelian|int(11)|Tidak|
+|product_id|int(11)|Tidak|
+|jumlah|int(11)|Tidak|
+|nama|varchar(50)|Tidak|
+|harga|int(11)|Tidak|
+|subharga|int(11)|Tidak|
+== Dumping data untuk tabel tb_pembelian_product
+
+|31|39|61|1|Dragon Scale|250000|250000
+|34|42|62|1|Kaktus Mini Echinocactus Grusonii|50000|50000
+|35|43|61|1|Dragon Scale|250000|250000
+== Struktur dari tabel tb_product
+
+|------
+|Kolom|Jenis|Tak Ternilai|Bawaan
+|------
+|//**product_id**//|int(11)|Tidak|
+|category_id|int(11)|Tidak|
+|product_name|varchar(50)|Tidak|
+|product_price|char(20)|Tidak|
+|product_description|text|Tidak|
+|product_image|varchar(50)|Tidak|
+|product_status|tinyint(1)|Tidak|
+|date_created|timestamp|Tidak|current_timestamp()
+|stok_product|int(5)|Tidak|
+== Dumping data untuk tabel tb_product
+
+|41|16|Aglonema Wulandari|1300000|&lt;p&gt;* Memiliki 10 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran.21&lt;/p&gt;
+
+&lt;p&gt;* Tulang daunnya yang berwarna merah&lt;/p&gt;
+
+&lt;p&gt;* Bentuk daunnya memangkuk&lt;/p&gt;
+|produk1655215059.JPG|1|2022-06-13 17:05:22|10
+|42|23|Banana Variegata|3999000|&lt;p&gt;* Memiliki 8 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Size remaja&lt;/p&gt;
+|produk1655118277.JPG|1|2022-06-13 18:04:37|10
+|43|16|Aglonema Moonlight|2500000|&lt;p&gt;* Memiliki 10 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran.21&lt;/p&gt;
+
+&lt;p&gt;* Tulang daunnya yang berwarna merah&lt;/p&gt;
+
+&lt;p&gt;* Bentuk daunnya memangkuk&lt;/p&gt;
+|produk1655118373.JPG|1|2022-06-13 18:06:13|10
+|44|16|Aglonema Hughes|2750000|&lt;p&gt;* Memiliki 9+ daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran 18&lt;/p&gt;
+|produk1655119191.JPG|1|2022-06-13 18:19:51|10
+|45|22|Anthurium Dorayaki|650000|&lt;p&gt;* Memiliki 9 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace tawon diameter ukuran 20&lt;/p&gt;
+|produk1655119433.JPG|1|2022-06-13 18:23:53|10
+|46|16|Aglonema Light of Diamond|1750000|&lt;p&gt;* Memiliki 16 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran.21&lt;/p&gt;
+|produk1655182943.JPG|1|2022-06-14 12:02:23|10
+|47|22|Anthurium Tarantula|250000|&lt;p&gt;* Memiliki 9 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot tawon dengan diameter ukuran 20&lt;/p&gt;
+|produk1655183089.JPG|1|2022-06-14 12:04:49|10
+|48|16|Aglonema Harley Quin|899000|&lt;p&gt;* Memiliki 10 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran.21&lt;/p&gt;
+|produk1655183421.JPG|1|2022-06-14 12:10:21|10
+|49|16|Aglonema Stardust Orange|1900000|&lt;p&gt;* Memiliki 11 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran 15&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+|produk1655183560.JPG|1|2022-06-14 12:12:40|10
+|50|36|Monstera Thailand Constellation|5500000|&lt;p&gt;* Memiliki 8 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot yogap ukuran 17&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+|produk1655184425.JPG|1|2022-06-14 12:27:05|10
+|51|17|Philodendron Florida Beauty Variegata|3500000|&lt;p&gt;Deskripsi :&lt;/p&gt;
+
+&lt;p&gt;* Memiliki 7 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace Hardware ukuran 15&lt;/p&gt;
+|produk1655215783.JPG|1|2022-06-14 21:09:43|10
+|52|31|Dieffenbachia Variegata|499000|&lt;p&gt;* Memiliki 6 otw ke 7 daun&lt;/p&gt;
+
+&lt;p&gt;* Akar sehat menggunakan perawatan fermetan&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot yogap ukuran 17&lt;/p&gt;
+|produk1655216132.JPG|1|2022-06-14 21:15:32|10
+|53|24|Cercestis Mirabilis|399000|&lt;p&gt;* Memiliki 5 daun&lt;/p&gt;
+
+&lt;p&gt;* Corak yang timbul membuat daun terlihat keren&lt;/p&gt;
+
+&lt;p&gt;* Dirawat sejak kecil hingga size remaja saat ini&lt;/p&gt;
+
+&lt;p&gt;* Tanaman sehat, daun baru semakin membesar&lt;/p&gt;
+|produk1655216742.JPG|1|2022-06-14 21:25:42|10
+|54|25|Kaktus Mini Haworthia Attenuata|50000|&lt;p&gt;* Tidak berduri tajam&lt;/p&gt;
+
+&lt;p&gt;* Perawatan mudah cukup percikan air secukupnya seminggu 1x&lt;/p&gt;
+
+&lt;p&gt;* Cocok untuk kamu yang banyak kegiatan namun ingin keindahan yang minim perawatan&lt;/p&gt;
+|produk1655217160.JPG|1|2022-06-14 21:32:40|10
+|55|16|Aglonema Green Papuma|699000|&lt;p&gt;* Memiliki 14 daun otw ke 16&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;* Size indukan yaa, sudah ada anak sampingnya juga siap panen&lt;/p&gt;
+
+&lt;p&gt;* Perawatan menggunakan fermetan dan ferliquid&lt;/p&gt;
+
+&lt;p&gt;* Daun, batang dan kuku-kuku sehat&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+|produk1655217379.JPG|1|2022-06-14 21:36:19|10
+|56|16|Aglonema Bigleaf|2250000|&lt;p&gt;* Memiliki 10 daun otw ke 11&lt;/p&gt;
+
+&lt;p&gt;* Aglonema ini sudah sehat karena di RESET menggunakan fermetan dan ferliquid&lt;/p&gt;
+
+&lt;p&gt;* Tanaman terawat, daun baru selalu membesar dibandingkan daun sebelumnya menandakan tanaman sehat&lt;/p&gt;
+
+&lt;p&gt;* Akar dan batang sehat&lt;/p&gt;
+
+&lt;p&gt;* Kuku daun sehat siap pajang&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot ace hardware ukuran 21&lt;/p&gt;
+
+&lt;p&gt;* Taruh dibawah naungan paranet agar tetap mendapatkan asupan matahari dari bagian atas&lt;/p&gt;
+|produk1655217646.JPG|1|2022-06-14 21:40:46|10
+|57|17|Philodendron Burlemax Variegata|250000|&lt;p&gt;* Memiliki 30+ daun&lt;/p&gt;
+
+&lt;p&gt;* Akar, daun sehat menggunakan perawatan fermetan dan ferliquid&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot togap ukuran 18&lt;/p&gt;
+
+&lt;p&gt;*&amp;nbsp;&lt;/p&gt;
+|produk1655217951.JPG|1|2022-06-14 21:45:51|10
+|58|26|Calathe Ornata|250000|&lt;p&gt;* Memiliki 11 daun&lt;/p&gt;
+
+&lt;p&gt;* Jenis calathea ini akan menguncupkan daunnya di sore ke malam hari&amp;nbsp; dan akan mekar kembali disaat pagi hari&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;* Menggunakan pot tawon diameter 15cm&lt;/p&gt;
+
+&lt;p&gt;* Perawatan mudah, disarankan untuk menaruh dibawah tempat teduh&lt;/p&gt;
+
+&lt;p&gt;* Jenis calathea ini tidak bisa ditaruh ditempat panas karena daun akan menggulung dan mengering&lt;br /&gt;
+&amp;nbsp;&lt;/p&gt;
+|produk1655218259.JPG|1|2022-06-14 21:50:59|10
+|59|26|Calathea Sintia|200000|&lt;p&gt;* Memiliki 15 daun otw ke 16&lt;/p&gt;
+
+&lt;p&gt;* Jenis calathea ini akan menguncupkan daunnya di sore ke malam hari dan akan mekar kembali disaat pagi hari&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;* Perawatan mudah, disarankan untuk menaruh dibawah tempat teduh&lt;/p&gt;
+
+&lt;p&gt;* Jenis calathea ini tidak bisa ditaruh ditempat panas karena daunnya akan menggulung dan mengering&lt;/p&gt;
+|produk1655218678.JPG|1|2022-06-14 21:57:58|10
+|60|30|Hoya|250000|&lt;p&gt;* Memiliki 34 daun&lt;/p&gt;
+
+&lt;p&gt;* Bunga nya kecil2 dan cantik&lt;/p&gt;
+
+&lt;p&gt;* Perawatan rutin menggunakan QC Gen 3&lt;/p&gt;
+
+&lt;p&gt;* Tanaman sehat dan rutin berbunga&lt;/p&gt;
+|produk1655218970.JPG|1|2022-06-14 22:02:50|10
+|61|29|Dragon Scale|250000|&lt;p&gt;* Memiliki 12 daun menuju ke 13&lt;/p&gt;
+
+&lt;p&gt;* Jenis alokasia ini suka air namun pastikan menempatkan nya di tempat yang teduh ya&lt;/p&gt;
+
+&lt;p&gt;* Media tanam juga harus poros misalkan menggunakan sekam bambu yang mudah untuk menyerap air&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;* Disarankan menggunakan pot yang banyak memiliki lubang dasar&lt;/p&gt;
+|produk1655219147.JPG|1|2022-06-14 22:05:47|10
+|62|25|Kaktus Mini Echinocactus Grusonii|50000|&lt;p&gt;* Berduri tetapi tidak tajam&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;* Perawatannya cukup mudah percikan air cukup seminggu 1x saja ya&lt;/p&gt;
+
+&lt;p&gt;* Cocok untuk kamu yang banyak kegiatan namun ingin keindahan yg minim perawatan&lt;/p&gt;
+|produk1655219408.JPG|1|2022-06-14 22:10:08|10
+
+
+
