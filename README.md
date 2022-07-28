@@ -1,5 +1,5 @@
 # Kebun.gaya
 
-https://rioshollu.github.io/Kebun.gaya/
+http://kebungaya.byethost32.com/
 
-Dalam tahap pengembangan
+### Link Hosting Website kebun.gaya
